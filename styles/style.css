@@ -1,0 +1,28 @@
+@font-face {
+    font-family: my-pinar;
+    font-weight: 400;
+    src: url("fonts/pinar/pinar-400.woff2") format("woff2");
+}
+@font-face {
+    font-family: my-pinar;
+    font-weight: 700;
+    src: url("fonts/pinar/pinar-700.woff2") format("woff2");
+}
+@font-face {
+    font-family: my-iran-yekan;
+    font-weight: normal;
+    src: url("fonts/iranyekan/woff2/iranyekanwebregular.woff2") format("woff2"),
+    url("fonts/iranyekan/woff/iranyekanwebregular.woff") format("woff"),
+    url("fonts/iranyekan/eot/iranyekanwebregular.eot")
+    format("embedded-opentype"),
+    url("fonts/iranyekan/ttf/iranyekanwebregular.ttf") format("truetype");
+}
+@font-face {
+    font-family: my-iran-yekan;
+    font-weight: bold;
+    src: url("fonts/iranyekan/eot/iranyekanwebbold.eot")
+    format("embedded-opentype"),
+    url("fonts/iranyekan/woff/iranyekanwebbold.woff") format("woff"),
+    url("fonts/iranyekan/woff2/iranyekanwebbold.woff2") format("woff2"),
+    url("fonts/iranyekan/ttf/iranyekanwebbold.ttf") format("truetype");
+}
