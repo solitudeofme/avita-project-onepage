@@ -44,6 +44,7 @@
     --primary-font: my-iran-yekan;
     --secondary-font: my-pinar;
     --section-padding:6em 0;
+    --bg-boxshadow: 0 0 200px 500px rgba(0, 0, 0, 0.78) inset;
 }
 *{
     box-sizing: border-box;
@@ -98,7 +99,7 @@ body{
 #main-section__bg{
     width: 100%;
     height:100vh;
-    position: fixed; /*bg-attachment:fixed; doesnt work here because of the scale animation*/
+    position:fixed; /*bg-attachment:fixed; doesnt work here because of the scale animation*/
     top: 0;
     left: 0;
     z-index: -1000;
@@ -157,7 +158,7 @@ body{
     margin-right: 2.5em;
 }
 #top-header__menu-icon hr{
-margin: 0 0 3px;
+    margin: 0 0 3px;
     height: 2px;
     background-color: white;
     border-radius: 10px;
@@ -168,10 +169,10 @@ margin: 0 0 3px;
 }
 #main-section__subtitle1{
     margin-top: 5.5em;
-font-size: 1.7rem;
+    font-size: 1.7rem;
 }
 #main-section__title, #different-color{
-font-family: var(--secondary-font),var(--primary-font),sans-serif;
+    font-family: var(--secondary-font),var(--primary-font),sans-serif;
     font-size: 3.5rem;
 }
 #different-color{
@@ -193,7 +194,7 @@ font-family: var(--secondary-font),var(--primary-font),sans-serif;
 }
 #search-input{
     display: inline-block;
-width:calc(100% - 50px);
+    width:calc(100% - 50px);
     border: none;
     background-color: transparent;
     padding-right:1em;
@@ -220,7 +221,6 @@ width:calc(100% - 50px);
     background-color: var(--secondary-color);
 }
 #services{
-    min-height: 700px;
     background-color: white;
     padding: var(--section-padding);
 }
@@ -230,9 +230,8 @@ width:calc(100% - 50px);
 }
 .service-item{
     padding: 1em 1.5em;
-    min-height: 300px;
     line-height: 2;
-    box-shadow: 5px 5px 10px 10px whitesmoke;
+    box-shadow: 0 0 10px 10px whitesmoke;
     border-radius: 15px 15px 40px 15px;
     text-align: center;
 }
@@ -304,4 +303,38 @@ opacity: .85;
 }
 .service-item:hover .more-info__link::after{
     border-color: white;
+}
+#statics{
+    width: 100%;
+    padding: 7em 0 4em;
+    background: url("../images/bg3.jpg") center/cover no-repeat fixed;
+    box-shadow: var(--bg-boxshadow) ;
+}
+#static-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+.static-item{
+    flex-basis: 25%;
+    display: flex;
+    row-gap: .2em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.static-item i{
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: .7em;
+}
+.static-num{
+    font-size: 4.6rem;
+    color:white;
+    font-family: var(--secondary-font),var(--primary-font),sans-serif;
+    font-weight: 700;
+}
+.static-item p{
+    color: white;
+    font-size: 1.2rem;
 }
