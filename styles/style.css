@@ -58,20 +58,19 @@ body{
     margin: 0 auto;
 }
 #main-section{
-    position: relative;
-    overflow: hidden;/*overflow:visible; causes scroll because of the bg animtion(scale)*/
-}
-
-#main-section,#main-section__bg{
     width: 100%;
-    height:100vh;
+    height: 100vh;
+    white-space: nowrap;
+    overflow: hidden;/*overflow:visible; causes scroll because of the bg animation(scale)*/
 }
 #main-section__bg{
-    position: absolute;
+    width: 100%;
+    height:100vh;
+    position: fixed; /*bg-attachment:fixed; doesnt work here because of the scale animation*/
     top: 0;
     left: 0;
     z-index: -1000;
-    background: url("../images/main_bg.jpg") center/cover no-repeat;
+    background:black url("../images/main_bg.jpg") center/cover no-repeat;
     animation: zoomin 4s alternate infinite;
 }
 #top-header,#top-header__nav{
@@ -101,7 +100,7 @@ body{
     text-decoration: none;
     font-size: 1.1rem;
     position: relative;
-    padding-bottom: 0.4em; /* distance between a and its ::after*/
+    padding-bottom: 0.4em; /* distance between link and its ::after*/
 }
 #top-header ul a:hover{
     color:var(--primary-color);
