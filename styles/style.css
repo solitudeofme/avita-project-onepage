@@ -39,9 +39,11 @@
 
     --primary-color: rgba(119, 87, 183, 0.78);
     --secondary-color:#cb79e1;
-    --subtitle-color:gray;
+    --subtitle-color: #606060;
+    --section-title-decoration: rgba(78, 18, 147, 0.78);
     --primary-font: my-iran-yekan;
     --secondary-font: my-pinar;
+    --section-padding:6em 0;
 }
 *{
     box-sizing: border-box;
@@ -56,6 +58,35 @@ body{
     width:80%;
     min-height: 300px;
     margin: 0 auto;
+}
+.section-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: max-content;
+    margin: 0 auto 1.1em;
+    font-size: 2.4rem;
+    font-family: var(--secondary-font), var(--primary-font), sans-serif;
+    position: relative;
+}
+.section-title::before,.section-title::after{
+    content: "";
+    display: block;
+    background-color: var(--section-title-decoration);
+    position: absolute;
+    height: 4px;
+}
+.section-title::before{
+    width:100px;
+    bottom: -10px;
+}
+.section-title::after{
+    width: 40px;
+    bottom: -20px;
+}
+.section-subtitle{
+    text-align: center;
+    color:var(--subtitle-color  );
 }
 #main-section{
     width: 100%;
@@ -185,4 +216,9 @@ width:calc(100% - 50px);
 }
 #search-btn:hover{
     background-color: var(--secondary-color);
+}
+#services{
+    min-height: 700px;
+    background-color: white;
+    padding: var(--section-padding);
 }
