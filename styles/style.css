@@ -87,6 +87,7 @@ body{
 .section-subtitle{
     text-align: center;
     color:var(--subtitle-color  );
+    margin-bottom: 2em;
 }
 #main-section{
     width: 100%;
@@ -132,6 +133,7 @@ body{
     font-size: 1.1rem;
     position: relative;
     padding-bottom: 0.4em; /* distance between link and its ::after*/
+    transition: all 200ms ease-in-out;
 }
 #top-header ul a:hover{
     color:var(--primary-color);
@@ -221,4 +223,85 @@ width:calc(100% - 50px);
     min-height: 700px;
     background-color: white;
     padding: var(--section-padding);
+}
+#service-wrapper{
+    display: flex;
+   gap: 2em;
+}
+.service-item{
+    padding: 1em 1.5em;
+    min-height: 300px;
+    line-height: 2;
+    box-shadow: 5px 5px 10px 10px whitesmoke;
+    border-radius: 15px 15px 40px 15px;
+    text-align: center;
+}
+.service-item .icon-wrapper{
+    width: 70px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius:5px 20px 60px ;
+    background-color: rgba(206, 206, 206, 0.20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+.service-item:hover .icon-wrapper{
+    background-color: white;
+    transform: rotateY(180deg);
+}
+.service-item p{
+    color: gray;
+}
+.more-info__link:link, .more-info__link:visited{
+    position: relative;
+    text-decoration: none;
+    color: var(--primary-color);
+
+}
+.more-info__link,.more-info__link::before,.more-info__link::after{
+    transition: all 200ms ease-in-out;
+}
+.more-info__link:hover,.more-info__link:hover::before,.more-info__link:hover::after{
+opacity: .85;
+}
+.more-info__link::before{
+    content: "";
+    display: inline-block;
+    background-color: var(--primary-color);
+    width: 15px;
+    height: 2px;
+    margin-left: .3em;
+}
+.more-info__link::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 4px;
+    width: 7px;
+    height: 7px;
+    border: solid var(--primary-color);
+    border-width: 0 2px 2px 0;
+    transform: rotate(-45deg);
+}
+/*hover on service-item*/
+.service-item,.service-item p,.icon-wrapper,.more-info__link,.more-info__link::after, .more-info__link::before{
+    transition: all 200ms ease-in-out;
+}
+.service-item:hover{
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-10px);
+}
+.service-item:hover p,.service-item:hover .more-info__link {
+    color: white;
+}
+.service-item:hover .more-info__link::before{
+    background-color: white;
+}
+.service-item:hover .more-info__link::after{
+    border-color: white;
 }
