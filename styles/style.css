@@ -90,6 +90,20 @@ body{
     color:var(--subtitle-color  );
     margin-bottom: 2em;
 }
+.bottom-side-selector{
+    padding: 0;
+    margin: 1.7em auto 0;
+    display: flex;
+    gap: .5em;
+    justify-content: center;
+    font-size: 1.3rem;
+    list-style-type: none;
+    color: rgba(152, 151, 151, 0.41);
+}
+.bottom-side-selector .active{
+    color: var(--primary-color);
+}
+
 #main-section{
     width: 100%;
     height: 100vh;
@@ -398,16 +412,62 @@ opacity: .85;
     color:var(--subtitle-color);
     line-height: 2;
 }
-#costumers ul{
-    padding: 0;
-    margin: 1.7em auto 0;
-    display: flex;
-    gap: .5em;
-    justify-content: center;
-    font-size: 1.3rem;
-    list-style-type: none;
-    color: rgba(152, 151, 151, 0.41);
+#samples{
+    background-color: white;
+    padding: var(--section-padding);
 }
-#costumers ul .active{
-    color: var(--primary-color);
+#sample-wrapper{
+    max-width: 100%;
+    display: grid;
+    justify-content: center;
+   grid-template-columns: repeat(auto-fit, minmax(350px, .5fr));
+}
+.sample-item{
+    position: relative;
+    overflow: hidden;
+}
+.sample-item img{
+    max-width: 100%;
+    vertical-align: middle;
+   transform: scale(1.13);
+    transition: all 200ms ease-in-out;
+}
+.sample-item:hover img{
+    transform: translateX(10px) scale(1.07);
+}
+.sample-item .caption-hover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 129, 151, 0.64);
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+
+}
+.sample-item:hover .caption-hover{
+    opacity: 1;
+}
+.sample-item h2{
+    padding: 0;
+    margin: 0;
+    font-family: var(--secondary-font),var(--primary-font),sans-serif;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.sample-item p{
+    position: absolute;
+    right: 30%;
+    top: 10%;
+    width: 45%;
+    color: white;
+    border-right: 4px solid white;
+    padding-right: 1em;
+    line-height: 1.7;
+transition: all 200ms ease-in-out;
+}
+.sample-item:hover p{
+transform: translateX(20%);
 }
