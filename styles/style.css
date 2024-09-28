@@ -398,4 +398,16 @@ opacity: .85;
     color:var(--subtitle-color);
     line-height: 2;
 }
-
+#costumers ul{
+    padding: 0;
+    margin: 1.7em auto 0;
+    display: flex;
+    gap: .5em;
+    justify-content: center;
+    font-size: 1.3rem;
+    list-style-type: none;
+    color: rgba(152, 151, 151, 0.41);
+}
+#costumers ul .active{
+    color: var(--primary-color);
+}
