@@ -416,6 +416,33 @@ opacity: .85;
     background-color: white;
     padding: var(--section-padding);
 }
+#samples-filter{
+   width: 600px;
+    padding: .4em .3em;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+   border: 2px solid #B97DD7;
+    border-radius: 30px;
+}
+
+#samples-filter li{
+    padding: .8em 1.6em;
+    border-radius: 30px;
+    transition: all 200ms ease-in-out;
+}
+#samples-filter a:link,#samples-filter a:visited {
+    color:#B97DD7;
+    text-decoration: none;
+    transition: all 200ms ease-in-out;
+}
+#samples-filter li:hover a,#samples-filter li.active a{
+    color: white;
+}
+#samples-filter li:hover ,#samples-filter li.active{
+    background-color: #B97DD7;
+}
 #sample-wrapper{
     max-width: 100%;
     display: grid;
@@ -441,7 +468,7 @@ opacity: .85;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(255, 129, 151, 0.64);
+    background-color: rgba(185, 125, 215, 0.67);
     opacity: 0;
     transition: all 200ms ease-in-out;
 
