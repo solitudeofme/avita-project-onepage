@@ -39,7 +39,7 @@
 
     --primary-color: rgba(119, 87, 183, 0.78);
     --secondary-color:#cb79e1;
-    --subtitle-color: #606060;
+    --subtitle-color: #727070;
     --section-title-decoration: rgba(78, 18, 147, 0.78);
     --primary-font: my-iran-yekan;
     --secondary-font: my-pinar;
@@ -338,3 +338,64 @@ opacity: .85;
     color: white;
     font-size: 1.2rem;
 }
+#costumers{
+    padding: var(--section-padding);
+    background-color: white;
+}
+#costumer-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+.costumer-item{
+    flex-basis: 45%;
+    min-height: 300px;
+    box-shadow: 0 0 10px 10px whitesmoke;
+    padding:  1.5em;
+}
+.costumer-item__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.quote-img{
+    width: 90px;
+}
+.profile-info-wrapper{
+    display: flex;
+    align-items: center;
+    gap: .8em;
+    margin-top: 1em;
+}
+.profile-pic{
+    display: inline-block;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 5px solid;
+    border-color: var(--primary-color) var(--primary-color) rgba(224, 224, 224, 0.89) rgba(224, 224, 224, 0.89);
+}
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    row-gap: .8em;
+}
+.profile-info h3,.profile-info h4{
+    margin: 0;
+}
+.profile-info h4{
+    color: var(--subtitle-color);
+    font-size: .9rem;
+}
+.stars{
+    display: flex;
+    column-gap: .2em;
+    font-size: 1.2rem;
+    color: #f6d054;
+}
+.costumer-item p{
+    text-align: justify;
+    color:var(--subtitle-color);
+    line-height: 2;
+}
+
