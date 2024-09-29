@@ -26,6 +26,16 @@
     url("fonts/iranyekan/woff2/iranyekanwebbold.woff2") format("woff2"),
     url("fonts/iranyekan/ttf/iranyekanwebbold.ttf") format("truetype");
 }
+@font-face {
+    font-family: my-iran-yekan;
+    font-weight: 100;
+    src: url("fonts/iranyekan/eot/iranyekanweblight.eot")
+    format("embedded-opentype"),
+    url("fonts/iranyekan/woff/iranyekanweblight.woff") format("woff"),
+    url("fonts/iranyekan/woff2/iranyekanweblight.woff2") format("woff2"),
+    url("fonts/iranyekan/ttf/iranyekanweblight.ttf") format("truetype");
+}
+
 @keyframes zoomin {
     0%{
         transform: scale(1);
@@ -69,7 +79,7 @@ body{
     flex-direction: row;
     justify-content: center;
     width: max-content;
-    margin: 0 auto 1.1em;
+    margin: 0 auto 1.2em;
     font-size: 2.4rem;
     font-family: var(--secondary-font), var(--primary-font), sans-serif;
     position: relative;
@@ -93,6 +103,7 @@ body{
     text-align: center;
     color:var(--subtitle-color  );
     margin-bottom: 2em;
+    font-weight: bold;
 }
 .bottom-side-selector{
     padding: 0;
@@ -525,21 +536,6 @@ opacity: .85;
 .team-member__titles{
     width: 100%;
     text-align: center;
-    position: relative;
-}
-.team-member__titles::after{
-    content: '';
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
- right: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary-color);
-transition: all 200ms ease-in-out;
-}
-.team-member:hover .team-member__titles::after{
-    transform: translateX(-100%);
 }
 .team-member h4{
     color:var(--primary-color);
@@ -585,4 +581,54 @@ transition: all 200ms ease-in-out;
 }
 .team-member__icon-wrapper a:hover{
     color: var(--primary-color);
+}
+#call-info{
+    padding: var(--section-padding);
+    background-color: white;
+}
+#call-info-wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+.call-info-item{
+    flex-basis: 33.333%;
+    line-height: 1.7;
+    text-align: center;
+}
+#call-info-wrapper i{
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+.call-info__title{
+    color:var(--subtitle-color);
+}
+.call-info-item h4{
+    font-weight: normal;
+}
+#call-info__form{
+display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em 6%;
+}
+
+.form-control{
+    flex-basis: 47%;
+    height: 60px;
+    padding: 0 20px;
+    border: none;
+    background-color: rgba(206, 206, 206, 0.36);
+    border-radius: 5px;
+}
+.form-control:focus{
+    outline: 2px solid var(--primary-color);
+}
+.form-control::placeholder,.form-control{
+    font-size: 1.1rem;
+}
+#your-message {
+    resize: none;
+    flex-basis: 100%;
+    height: 300px;
+    padding: 20px;
 }
