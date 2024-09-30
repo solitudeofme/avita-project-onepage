@@ -530,7 +530,13 @@ opacity: .85;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    background-color: rgba(213, 209, 209, 0.69);
+    background-image: linear-gradient(90deg, rgba(204, 202, 206, 0.66) 50%, var(--primary-color) 50%);
+    background-size: 200% 100%;
+    background-position: 0 0;
+    transition: all 0.5s ease-in-out;
+}
+.team-member:hover{
+    background-position: 100% 0;
 }
 .team-member__titles{
     width: 100%;
