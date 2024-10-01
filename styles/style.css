@@ -124,7 +124,6 @@ body{
 #main-section{
     width: 100%;
     height: 100vh;
-    white-space: nowrap;
     overflow: hidden;/*overflow:visible; causes scroll because of the bg animation(scale)*/
 }
 #main-section__bg{
@@ -249,7 +248,7 @@ body{
 }
 #overlay-menu{
     position: fixed;
-    bottom: -100%;
+    bottom: -110%;
     left: 0;
     width: 100%;
     height: 100vh;
@@ -272,20 +271,17 @@ body{
     display: block;
     max-width: 100%;
     width: 250px;
-    margin: 0 auto;
+    margin: 1em auto 0;
 }
 #overlay-menu ul{
     padding:0;
     list-style-type: none;
-    width: 60%;
+    max-width: 80%;
     display: flex;
     justify-content: center;
+margin: 8em auto 0;
     gap: .3em 1.7em;
     flex-wrap: wrap;
-    position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%,-50%);
 }
 #overlay-menu li{
     flex-basis: 47%;
@@ -344,6 +340,7 @@ body{
 #service-wrapper{
     display: flex;
    gap: 2em;
+    justify-content: center;
 }
 .service-item{
     padding: 1em 1.5em;
@@ -367,6 +364,9 @@ body{
 .service-item:hover .icon-wrapper{
     background-color: white;
     transform: rotateY(180deg);
+}
+.service-item h2{
+    white-space: nowrap;
 }
 .service-item p{
     color: gray;
@@ -423,13 +423,14 @@ opacity: .85;
 }
 #statics{
     width: 100%;
-    padding: 7em 0 4em;
+    padding: 7em 0;
     background: url("../images/bg3.jpg") center/cover no-repeat fixed;
     box-shadow: var(--bg-boxshadow) ;
 }
 #static-wrapper{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1em;
 }
 .static-item{
@@ -550,7 +551,7 @@ opacity: .85;
     max-width:100%;
     display: grid;
     justify-content: center;
-   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+   grid-template-columns: repeat(4,1fr);
 }
 .sample-item{
     position: relative;
@@ -612,11 +613,18 @@ opacity: .85;
 }
 .team-member{
     flex-basis: 25%;
-    min-height: 430px;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    background-color: rgba(213, 209, 209, 0.69);
+   background-image: linear-gradient(90deg, rgb(229, 229, 229) 50%, var(--primary-color) 50%);
+    background-size: 200% 100%;
+    background-position: 0 0;
+}
+.team-member:hover{
+    background-position: 100% 0;
+}
+.team-member img{
+    width: 100%;
 }
 .team-member__titles{
     width: 100%;
@@ -695,7 +703,7 @@ display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1em 1%;
-    margin-bottom:1em
+    margin:1em auto 3em;
 }
 
 .form-control{
@@ -737,17 +745,18 @@ display: flex;
     background:url("../images/footer_bg.png") center/cover no-repeat,linear-gradient(90deg, var(--secondary-color) 15%, var(--primary-color) 87%) white;
     padding: 2em 0;
 }
-#footer-item-wrapper{
+#footer-wrapper{
     display: flex;
-    justify-content: space-between;
-    gap: 4em;
+    justify-content:center;
+    gap: 2em;
 }
 .footer-item{
-    flex-basis: 40%;
+    flex-basis: 25%;
     padding: 0 1em;
 }
 .footer-item h2{
     color: white;
+    white-space: nowrap;
     font-family: var(--secondary-font),var(--primary-font),sans-serif;
     position: relative;
     margin-bottom: 1.5em;
@@ -809,6 +818,7 @@ display: flex;
 .easy-access-footer ul{
     list-style-type: none;
     padding: 0;
+    white-space: nowrap;
 }
 .easy-access-footer li{
     margin-bottom: 1.3em;
@@ -834,7 +844,7 @@ display: flex;
     font-weight: bold;
 }
 .download-app-footer img{
-    width:100%;
+    width:200px;
     opacity: .8;
     transition: all 200ms ease-in-out;
 }
