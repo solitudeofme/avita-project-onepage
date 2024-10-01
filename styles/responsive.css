@@ -1,0 +1,115 @@
+@media only screen and (max-width: 1200px){
+    #top-header ul{
+        gap: 1em;
+    }
+    #service-wrapper{
+        flex-wrap: wrap;
+    }
+    .service-item{
+        flex-basis: 48%;
+    }
+    #samples-filter{
+        width: 100%;
+    }
+    #footer-wrapper{
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+    .footer-item{
+        flex-basis: 45%;
+    }
+}
+@media only screen and (max-width: 992px){
+    #main-section__form{
+        width: 100%;
+    }
+    #top-header ul{
+      display: none;
+    }
+    #top-header__logo img{
+        width: 150px;
+    }
+    .service-item{
+        flex-basis: 100%;
+    }
+    #static-wrapper{
+        flex-wrap: wrap;
+    }
+    .static-item{
+        flex-basis: 48%;
+    }
+    .costumer-item__header{
+        justify-content: center;
+        text-align: center;
+        position: relative;
+    }
+    .profile-info-wrapper{
+        flex-direction: column;
+    }
+    .quote-img{
+        width: 50px;
+        position: absolute;
+        top: 50px;
+        left: -10px;
+    }
+
+    #sample-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #team-wrapper{
+        flex-wrap: wrap;
+    }
+    .team-member{
+        flex-basis: 48%;
+    }
+}
+@media only screen and (max-width: 720px){
+    #static-wrapper{
+        gap: 4em;
+    }
+    .static-item{
+        flex-basis: 100%;
+    }
+    #samples-filter{
+       flex-direction: column;
+        row-gap: .6em;
+    }
+    #sample-wrapper{
+        grid-template-columns: auto;
+    }
+    #costumer-wrapper{
+        flex-wrap: wrap;
+    }
+    .quote-img{
+        width: 60px;
+        left: 0;
+    }
+
+    .costumer-item{
+        flex-basis: 100%;
+    }
+    #team-wrapper{
+        flex-wrap: wrap;
+    }
+    .team-member{
+        flex-basis: 80%;
+    }
+    #call-info-wrapper{
+        flex-wrap: wrap;
+    }
+    .form-control{
+        flex-basis: 100%;
+    }
+
+    .footer-item{
+        flex-basis: 100%;
+    }
+    #overlay-menu ul{
+        margin-top: 1em;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 480px){
+
+
+}
