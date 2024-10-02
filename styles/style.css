@@ -792,18 +792,14 @@ display: flex;
     display: flex;
     gap: .5em;
 }
-.avita-footer li{
+.avita-footer a:link,.avita-footer a:visited{
     width: 45px;
     aspect-ratio: 1;
     border: 1px solid white;
     border-radius: 50%;
-    text-align: center;
-    transition: all 200ms ease-in-out;
-}
-.avita-footer i{
-    vertical-align: middle;
-}
-.avita-footer a:link,.avita-footer a:visited{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     font-size: 1.4rem;
     transition: all 200ms ease-in-out;
@@ -812,7 +808,7 @@ display: flex;
 .avita-footer li:hover a{
  color:black;
 }
-.avita-footer li:hover{
+.avita-footer li:hover a{
     background-color: white;
 }
 .easy-access-footer ul{
