@@ -282,10 +282,11 @@ body{
 margin: 8em auto 0;
     gap: .3em 1.7em;
     flex-wrap: wrap;
+    white-space: nowrap;
 }
 #overlay-menu li{
     flex-basis: 47%;
-}
+  }
 #overlay-menu li a:link,#overlay-menu li a:visited{
     display: flex;
     gap: 1em;
@@ -321,9 +322,6 @@ margin: 8em auto 0;
 }
 #overlay-menu.show{
     bottom: 0;
-}
-#overlay-menu.close{
-    bottom:-100%;
 }
 #top-header__open-close {
     display: inline-block;
