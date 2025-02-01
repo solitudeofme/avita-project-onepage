@@ -64,6 +64,21 @@
     }
 }
 @media only screen and (max-width: 720px){
+   #main-section__subtitle1{
+        margin-top: 2.5em;
+        margin-bottom: 2.5em;
+    }
+    
+    #main-section__title{
+        font-size: 2.5em;
+        line-height: 1.5;
+    }
+    #search-input::placeholder{
+        font-size: 1rem;
+    }
+    #overlay-menu ul{
+        grid-template-columns: auto;
+    }
     #static-wrapper{
         gap: 4em;
     }
@@ -75,7 +90,7 @@
         row-gap: .6em;
     }
     #sample-wrapper{
-        grid-template-columns: auto;
+        grid-template-columns: repeat(1, 1fr);
     }
     #costumer-wrapper{
         flex-wrap: wrap;
@@ -91,7 +106,7 @@
     #team-wrapper{
         flex-wrap: wrap;
     }
-    .team-member{
+    #team-wrapper .team-member{
         flex-basis: 80%;
     }
     #call-info-wrapper{
@@ -108,8 +123,4 @@
         margin-top: 1em;
         width: 100%;
     }
-}
-@media only screen and (max-width: 480px){
-
-
 }
